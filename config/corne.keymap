@@ -41,7 +41,7 @@
    &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7    &kp N8 &kp N9 &kp N0   &kp BSLH
    &kp TAB    &none        &none        &none        &none        &kp HOME       &kp PLUS  &kp N4    &kp N5 &kp N6 &kp MINUS &kp EQUAL
    &kp CLCK   &none        &none        &none        &none        &kp END        &kp STAR  &kp N1    &kp N2 &kp N3 &trans   &trans 
-                          	        &kp LGUI     &trans       &kp BSPC       &kp SPACE &sl 3     &kp RALT
+                          	        &kp LGUI     &trans       &kp BSPC       &kp SPACE &to 4     &kp RALT
                         >;
                 };
 
@@ -55,7 +55,7 @@
    &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR   &kp PRCNT       &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp PIPE
    &kp LCTRL &kp LBRC &kp RBRC &kp LPAR &kp RPAR &kp C_VOL_UP    &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans &trans
    &kp LSHFT &trans   &trans &kp LBKT &kp RBKT   &kp C_VOL_DN    &trans &trans &trans &trans &trans &trans 
-                    	     &kp LGUI &sl 3      &kp DEL         &trans &trans &trans
+                    	     &kp LGUI &to 4      &kp DEL         &trans &trans &trans
                         >;
                 };
 
