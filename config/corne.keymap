@@ -36,12 +36,12 @@
 // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  \   |
 // | a+esc|     |     |     |     | HOME|   |  +  |  4  |  5  |  6  |  -  |  =   |
 // | CPLK |BTCLR| BT1 | BT2 | BT3 | END |   |  *  |  1  |  2  |  3  |  /  |      |
-//                    |c+a+d| LWR | BKSP|   | SPC | RSE  | ALT |
+//                    |c+a+d| LWR | BKSP|   | SPC | ADJ | ALT |
                         bindings = <
    &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7    &kp N8 &kp N9 &kp N0   &kp BSLH
    &kp TAB    &trans       &trans       &trans       &trans       &kp HOME       &kp PLUS  &kp N4    &kp N5 &kp N6 &kp MINUS &kp EQUAL
-   &kp CLCK   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp END        &kp STAR &kp N1    &kp N2 &kp N3 &trans   &trans 
-                          	        &kp LGUI     &trans       &kp BSPC       &kp SPACE &trans    &kp RALT
+   &kp CLCK   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp END        &kp STAR  &kp N1    &kp N2 &kp N3 &trans   &trans 
+                          	        &kp LGUI     &trans       &kp BSPC       &kp SPACE &mo 3     &kp RALT
                         >;
                 };
 
@@ -55,20 +55,34 @@
    &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR   &kp PRCNT       &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp PIPE
    &kp LCTRL &kp LBRC &kp RBRC &kp LPAR &kp RPAR &kp C_VOL_UP    &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans &trans
    &kp LSHFT &trans   &trans &kp LBKT &kp RBKT   &kp C_VOL_DN    &trans &trans &trans &trans &trans &trans 
-                    	     &kp LGUI &mo 3      &kp DEL         &trans &kp SPACE    &kp RALT
+                    	     &kp LGUI &mo 3      &kp DEL         &trans &trans &trans
                         >;
                 };
 
-                newdefault_layer {
+                adjust_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  \   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENTR  |
-//                    | GUI | LWR | BKSP|   | SPC | RSE  | ALT |
+// |      |      |      |      |      |      |  |      |      |      |      |      |      |
+// |      |      |      |      |      |      |  |      |      |      |      |      |      |
+// |      |      |      |      |      |      |  |      |      |      |      |      |      |
+//                      | GUI  | LWR  | BKSP |  | SPC  | RSE  | ALT  |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y     &kp U &kp I     &kp O   &kp P    &kp BSLH
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H     &kp J &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N     &kp M &kp COMMA &kp DOT &kp FSLH &kp RET
+   &none     &none     &none     &none     &none     &none         &none     &none     &none     &none     &none     &none     
+   &none     &none     &none     &none     &none     &none         &tog 4    &tog 0    &none     &none     &none     &none     
+   &none     &none     &none     &none     &none     &none         &none     &none     &none     &none     &none     &none     
+                                 &kp LGUI  &mo 1     &kp BSPC      &kp SPACE     &mo 2     &kp RALT
+                        >;
+                };
+
+                colemak-dhm_layer {
+// -----------------------------------------------------------------------------------------
+// | ESC  |   Q  |   W  |   F  |   P  |   B  |  |   J  |   L  |   U  |   Y  |   ;  |  \   |
+// | CTRL |   A  |   R  |   S  |   T  |   G  |  |   M  |   N  |   E  |   I  |   O  |  "   |
+// | SHFT |   Z  |   X  |   C  |   D  |   V  |  |   K  |   H  |   ,  |   .  |   /  | ENTER|
+//                      | GUI  | LWR  | BKSP |  | SPC  | RSE  | ALT  |
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J     &kp L &kp U     &kp Y   &kp SEMI &kp BSLH
+   &kp LCTRL &kp A &kp R &kp S &kp T &kp G   &kp M     &kp N &kp E     &kp O   &kp O    &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K     &kp H &kp COMMA &kp DOT &kp FSLH &kp RET
                    &kp LGUI  &mo 1 &kp BSPC  &kp SPACE &mo 2 &kp RALT
                         >;
                 };
