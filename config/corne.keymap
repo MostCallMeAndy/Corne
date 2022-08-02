@@ -28,13 +28,13 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  \   |
-// | a+esc|     |     |     |     | HOME|   |  +  |  4  |  5  |  6  |  *  |  =   |
-// | CPLK |BTCLR| BT1 | BT2 | BT3 | END |   |  -  |  1  |  2  |  3  |  /  |      |
+// | a+esc|     |     |     |     | HOME|   |  +  |  4  |  5  |  6  |  -  |  =   |
+// | CPLK |BTCLR| BT1 | BT2 | BT3 | END |   |  *  |  1  |  2  |  3  |  /  |      |
 //                    |c+a+d| LWR | BKSP|   | SPC | RSE  | ALT |
                         bindings = <
    &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7    &kp N8 &kp N9 &kp N0   &kp BSLH
-   &kp TAB    &trans       &trans       &trans       &trans       &kp HOME       &kp PLUS  &kp N4    &kp N5 &kp N6 &kp STAR &kp EQUAL
-   &kp CLCK   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp END        &kp MINUS &kp N1    &kp N2 &kp N3 &trans   &trans 
+   &kp TAB    &trans       &trans       &trans       &trans       &kp HOME       &kp PLUS  &kp N4    &kp N5 &kp N6 &kp MINUS &kp EQUAL
+   &kp CLCK   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp END        &kp STAR &kp N1    &kp N2 &kp N3 &trans   &trans 
                           	        &kp LGUI     &trans       &kp BSPC       &kp SPACE &trans    &kp RALT
                         >;
                 };
