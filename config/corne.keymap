@@ -35,12 +35,12 @@
 // -----------------------------------------------------------------------------------------
 // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  \   |
 // | a+esc|     |     |     |     | HOME|   |  +  |  4  |  5  |  6  |  -  |  =   |
-// | CPLK |BTCLR| BT1 | BT2 | BT3 | END |   |  *  |  1  |  2  |  3  |  /  |      |
+// | CPLK |     |     |     |     | END |   |  *  |  1  |  2  |  3  |  /  |      |
 //                    |c+a+d| LWR | BKSP|   | SPC | ADJ | ALT |
                         bindings = <
    &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7    &kp N8 &kp N9 &kp N0   &kp BSLH
-   &kp TAB    &trans       &trans       &trans       &trans       &kp HOME       &kp PLUS  &kp N4    &kp N5 &kp N6 &kp MINUS &kp EQUAL
-   &kp CLCK   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp END        &kp STAR  &kp N1    &kp N2 &kp N3 &trans   &trans 
+   &kp TAB    &none        &none        &none        &none        &kp HOME       &kp PLUS  &kp N4    &kp N5 &kp N6 &kp MINUS &kp EQUAL
+   &kp CLCK   &none        &none        &none        &none        &kp END        &kp STAR  &kp N1    &kp N2 &kp N3 &trans   &trans 
                           	        &kp LGUI     &trans       &kp BSPC       &kp SPACE &mo 3     &kp RALT
                         >;
                 };
@@ -61,15 +61,16 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// |      |      |      |      |      |      |  |      |      |      |      |      |      |
-// |      |      |      |      |      |      |  |      |      |      |      |      |      |
-// |      |      |      |      |      |      |  |      |      |      |      |      |      |
-//                      | GUI  | LWR  | BKSP |  | SPC  | RSE  | ALT  |
+// -----------------------------------------------------------------------------------------
+// |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  |  F7  |  F8  |  F9  | F10  | F11  | F12  |
+// |      |      |      |      |      |      |  |colmak|qwerty|      |      |      |      |
+// |      | BTCLR|  BT1 | BT2  |  BT3 |      |  |      |      |      |      |reset |btload|
+//                      | trans| trans| trans|  |trans |trans |trans |
                         bindings = <
-   &none     &none     &none     &none     &none     &none         &none     &none     &none     &none     &none     &none     
-   &none     &none     &none     &none     &none     &none         &tog 4    &tog 0    &none     &none     &none     &none     
-   &none     &none     &none     &none     &none     &none         &none     &none     &none     &none     &none     &none     
-                                 &kp LGUI  &mo 1     &kp BSPC      &kp SPACE     &mo 2     &kp RALT
+   &kp F1    &kp F2     &kp F3       &kp F4       &kp F5       &kp F6        &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12    
+   &none     &none      &none        &none        &none        &none         &tog 4    &tog 0    &none     &none     &none     &none     
+   &none     &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none         &none     &none     &none     &none     &reset    &bootloader     
+                                     &kp LGUI     &mo 1        &kp BSPC      &kp SPACE &mo 2     &kp RALT
                         >;
                 };
 
