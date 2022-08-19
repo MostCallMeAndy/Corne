@@ -21,12 +21,12 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  -   |
+// | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  -   |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENTR  |
 //                    | GUI | LWR | BKSP|   | SPC | RSE  | ALT |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E    &kp R     &kp T          &kp Y     &kp U     &kp I     &kp O   &kp P    &kp MINUS
+   &kp TAB   &kp Q &kp W &kp E    &kp R     &kp T          &kp Y     &kp U     &kp I     &kp O   &kp P    &kp MINUS
    &kp LCTRL &kp A &kp S &kp D    &kp F     &kp G          &kp H     &kp J     &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C    &kp V     &kp B          &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &kp RET
                          &kp LGUI &mo LOWER &kp BSPC       &kp SPACE &mo RAISE &kp RALT
@@ -35,12 +35,12 @@
 
                 colemak-dhm_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC  |   Q  |   W  |   F  |   P  |   B  |  |   J  |   L  |   U  |   Y  |   ;  |  -  |
+// | TAB  |   Q  |   W  |   F  |   P  |   B  |  |   J  |   L  |   U  |   Y  |   ;  |  -  |
 // | CTRL |   A  |   R  |   S  |   T  |   G  |  |   M  |   N  |   E  |   I  |   O  |  "   |
 // | SHFT |   Z  |   X  |   C  |   D  |   V  |  |   K  |   H  |   ,  |   .  |   /  | ENTER|
 //                      | GUI  | LWR  | BKSP |  | SPC  | RSE  | ALT |
                         bindings = <
-   &kp ESC   &kp Q &kp W     &kp F     &kp P     &kp B        &kp J     &kp L     &kp U     &kp Y   &kp SEMI &kp MINUS
+   &kp TAB   &kp Q &kp W     &kp F     &kp P     &kp B        &kp J     &kp L     &kp U     &kp Y   &kp SEMI &kp MINUS
    &kp LCTRL &kp A &kp R     &kp S     &kp T     &kp G        &kp M     &kp N     &kp E     &kp I   &kp O    &kp SQT
    &kp LSHFT &kp Z &kp X     &kp C     &kp D     &kp V        &kp K     &kp H     &kp COMMA &kp DOT &kp FSLH &kp RET
                              &kp LGUI  &mo LOWER &kp BSPC     &kp SPACE &mo RAISE &kp RALT
@@ -49,13 +49,13 @@
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  \   |
-// | a+esc|     |     |     |     | HOME|   |  +  |  4  |  5  |  6  |  -  |  =   |
+// | ESC  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  \   |
+// | CTRL |     |     |     |     | HOME|   |  +  |  4  |  5  |  6  |  -  |  =   |
 // | SHFT |     |     |     | INS | END |   |  *  |  1  |  2  |  3  |  /  |      |
 //                    |c+a+d| LWR | BKSP|   | SPC | ADJ | ALT |
                         bindings = <
-   &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7     &kp N8 &kp N9 &kp N0    &kp BSLH
-   &kp TAB    &none        &none        &none        &none        &kp HOME       &kp PLUS  &kp N4     &kp N5 &kp N6 &kp MINUS &kp EQUAL
+   &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7     &kp N8 &kp N9 &kp N0    &kp BSLH
+   &kp LCTRL  &none        &none        &none        &none        &kp HOME       &kp PLUS  &kp N4     &kp N5 &kp N6 &kp MINUS &kp EQUAL
    &kp LSHFT  &none        &kp INS      &none        &none        &kp END        &kp STAR  &kp N1     &kp N2 &kp N3 &trans    &trans 
                           	        &kp LGUI     &trans       &kp BSPC       &kp SPACE &mo ADJUST &kp RALT
                         >;
